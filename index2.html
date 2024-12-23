@@ -4,40 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container .item{
+            background-color: red;
+        }
+        .footer-container .item{
+            background-color: blue;
+        }
+        .main-container > .item{
+            background-color: green;
+            padding: 10px;
+        }
+        .button{
+            background-color: yellow;
+            padding: 10px;
+        }
+        .button.active{
+            background-color: orange;
+            padding: 10px;
+        }
+        .button.danger{
+            background-color: red;
+            padding: 10px;
+        }
+        .item1+.item2 {
+            background-color: blue;
+        }
+        input[type="text"] {
+            background-color: gray;
+            border: 1px;
+            height: 30px;
+            margin: 2px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Register form</h1>
-    ชื่อ<input type="text">
-    นามสกุล<input type="text">
-    อายุ<input type="number" min="0" max="150">
-    <div>
-        เพศ
-        <div>
-            <input name="gender" type="radio">ชาย
-        </div>
-        <div>
-            <input name="gender" type="radio">หญิง
-        </div>
-        <div>
-            <input name="gender" type="radio">อื่นๆ
+    <div class="container">
+        container
+        <div class="item">  
+            item
         </div>
     </div>
-    <div>
-        สิ่งที่สนใจ
-        <div>
-            <input name="interest" type="checkbox">เรียน
+    
+    <div class="main-container">
+        container
+        <div class="item">
+            item
+            <div class="item">
+                item 1    
+            </div>
+            <div class="item">
+                item 2    
+            </div>
+            <div class="item">
+                item 3    
+            </div>
+           
+                
         </div>
-        <div>
-            <input name="interest" type="checkbox">เล่นเกม
-        </div>
-        <div>
-            <input name="interest" type="checkbox">อ่านหนังสือ
-        </div>
+
     </div>
-    <div>
-        คำอธิบายตัวเอง
-        <textarea></textarea>
-    </div>
-    <button>ส่งข้อมูล</button>
+
+    <button class="button">ปุ่ม</button>
+    <button class="button active">ปุ่ม</button>
+    <button class="button danger">ปุ่ม</button>
+
+    <div class="item1">Item 1</div> 
+    <div class="item2">Item 2</div> 
+
+    <input type="text" name="username"><br>
+    <input type="text" name="password"><br>
+    <input type="text" name="email">
 </body>
 </html>
